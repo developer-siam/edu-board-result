@@ -8,8 +8,6 @@
 	<link rel="shortcut icon" type="image/x-icon" href="assets/images/bd_logo.png">
 </head>
 <body>
-	
-
 	<div class="wraper">
 		<div class="w-top">
 			<div class="logo">
