@@ -1,6 +1,6 @@
 <?php	
 	namespace Edu\Board\Support;
-	require_once "../../config.php"; 
+	require_once "../config.php"; 
 	use PDO;
 	/**
 	 * Database management(Database connection,Data add,Data delete,Data show,Data edit)
@@ -19,7 +19,20 @@
 		 * Database connection
 		 */
 		private function connection(){
-			$connection = new PDO('mysql:host='.$this->host.';db_name='.$this->db,$this->user,$this->pass);
+			return $this->connection = new PDO('mysql:host='.$this->host.';dbname='.$this->db,$this->user,$this->pass);
+		}
+		/**
+		 * user email / username checking from Database table
+		 */
+		public function check($table,$data)
+		{
+			$stmt=$this->connection()-> prepare("SELECT * FROM $table WHERE uname='$data'||email='$data'");
+			$stmt->execute();
+			$num=$stmt->rowCount();
+			return[
+				'num' => $num,
+				'data' => $stmt
+			];			
 		}
 	}
 
