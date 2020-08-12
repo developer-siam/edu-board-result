@@ -1,6 +1,6 @@
 <?php	
 	namespace Edu\Board\Support;
-	require_once "../config.php"; 
+	// require_once "../config.php"; 
 	use PDO;
 	/**
 	 * Database management(Database connection,Data add,Data delete,Data show,Data edit)

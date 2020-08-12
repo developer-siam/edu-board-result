@@ -1,8 +1,10 @@
+<?php require_once "../vendor/autoload.php"?>
+<?php require_once "../config.php"?>
 <!DOCTYPE html>
 <html lang="en" class="app">
 <head>
     <meta charset="utf-8" />
-    <title>Scale | Web Application</title>
+    <title><?php echo $_SESSION['name']; ?></title>
     <meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <link rel="stylesheet" href="css/app.v1.css" type="text/css" />
@@ -75,7 +77,11 @@
                         <section class="panel bg-white">
                             <div class="panel-heading b-light bg-light"> <strong>You have <span class="count">2</span> notifications</strong> </div>
                             <div class="list-group list-group-alt">
-                                <a href="#" class="media list-group-item"> <span class="pull-left thumb-sm"> <img src="images/a0.png" alt="..." class="img-circle"> </span> <span class="media-body block m-b-none"> Use awesome animate.css<br> <small class="text-muted">10 minutes ago</small> </span> </a>
+                                <a href="#" class="media list-group-item"> <span class="pull-left thumb-sm"> 
+
+                                	<img src="images/<?php echo $_SESSION['photo']; ?>" alt="..." class="img-circle">
+
+                                 </span> <span class="media-body block m-b-none"> Use awesome animate.css<br> <small class="text-muted">10 minutes ago</small> </span> </a>
                                 <a href="#" class="media list-group-item"> <span class="media-body block m-b-none"> 1.0 initial released<br> <small class="text-muted">1 hour ago</small> </span> </a>
                             </div>
                             <div class="panel-footer text-sm"> <a href="#" class="pull-right"><i class="fa fa-cog"></i></a> <a href="#notes" data-toggle="class:show animated fadeInRight">See all the notifications</a> </div>
@@ -83,7 +89,7 @@
                     </section>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span class="thumb-sm avatar pull-left"> <img src="images/a0.png" alt="..."> </span> John.Smith <b class="caret"></b> </a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span class="thumb-sm avatar pull-left"> <img src="images/<?php echo $_SESSION['photo']; ?>" alt="..."> </span> <?php echo $_SESSION['name']; ?> <b class="caret"></b> </a>
                     <ul class="dropdown-menu animated fadeInRight">
                         <li> <span class="arrow top"></span> <a href="#">Settings</a> </li>
                         <li> <a href="profile.html">Profile</a> </li>
@@ -116,7 +122,11 @@
                             <div class="slim-scroll" data-height="auto" data-disable-fade-out="true" data-distance="0" data-size="10px" data-railOpacity="0.2">
                                 <div class="clearfix wrapper dk nav-user hidden-xs">
                                     <div class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span class="thumb avatar pull-left m-r"> <img src="images/a0.png" class="dker" alt="..."> <i class="on md b-black"></i> </span> <span class="hidden-nav-xs clear"> <span class="block m-t-xs"> <strong class="font-bold text-lt">John.Smith</strong> <b class="caret"></b> </span> <span class="text-muted text-xs block">Art Director</span> </span>
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span class="thumb avatar pull-left m-r"> 
+                                        	
+                                        	<img src="images/<?php echo $_SESSION['photo']; ?>" class="dker" alt="...">
+
+                                        	 <i class="on md b-black"></i> </span> <span class="hidden-nav-xs clear"> <span class="block m-t-xs"> <strong class="font-bold text-lt"><?php echo $_SESSION['name']; ?></strong> <b class="caret"></b> </span> <span class="text-muted text-xs block"><?php echo $_SESSION['cell']; ?></span> </span>
                                         </a>
                                         <ul class="dropdown-menu animated fadeInRight m-t-xs">
                                             <li> <span class="arrow top hidden-nav-xs"></span> <a href="#">Settings</a> </li>

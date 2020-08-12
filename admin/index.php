@@ -1,4 +1,5 @@
 <?php require_once "../vendor/autoload.php"?>
+<?php require_once "../config.php"?>
 <?php 
     use Edu\Board\Support\Auth;
     /**
