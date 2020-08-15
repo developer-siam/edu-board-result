@@ -46,4 +46,14 @@
 			return $this->check('users',$value);
 			
 		}
+		public function userLogout()
+		{
+			session_destroy();
+			header("location:index.php");
+		}
+
+
+
+
+
 	}
